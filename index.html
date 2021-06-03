@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>React Minin Cource</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    
+    <script type="text/babel">
+
+        function Car(props) {
+            return (
+                <div className="car">
+                    <h3>{props.name}</h3>
+                    <p>Year: <strong>{props.year}</strong></p>
+                    <p>Description</p>
+                </div>
+            )
+        }
+
+        const App = (
+            <div>
+                <Car name="Ford Mustang" year="2020"/>
+                <Car name="Audi A4" year="2021"/>
+                <Car name="Honda Accord" year="2015"/>
+            </div>
+        )
+
+
+        ReactDOM.render(
+            App ,    // Can render only ONE component
+            document.querySelector('#root')
+        );
+    
+    </script>
+
+
+</body>
+</html>
